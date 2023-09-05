@@ -27,6 +27,7 @@ public class MemberController {
         boolean result = memberService.save(memberDTO);
         if (result) {
             System.out.println("회원 등록 성공");
+            System.out.println("memberDTO = " + memberDTO);
             return "memberLogin"; //성공하면 메인 화면(index.jsp)로 돌아가도록 함
         } else {
             System.out.println("회원 등록 실패");

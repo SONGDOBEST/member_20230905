@@ -2,11 +2,12 @@
 <html>
 <head>
     <title>메인페이지</title>
+    <link rel="stylesheet" href="/resources/css/style.css">
 </head>
 <body>
 <h2>index.jsp</h2>
-<a href="/memberSave">회원가입</a> <br>
-<a href="/memberLogin">로그인</a> <br>
-<a href="/memberList">회원목록</a> <br>
+<a href="/save">회원가입</a> <br>
+<a href="/login">로그인</a> <br>
+<a href="/members">회원목록</a> <br>
 </body>
 </html>

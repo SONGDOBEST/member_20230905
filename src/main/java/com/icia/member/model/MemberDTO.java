@@ -3,7 +3,7 @@ package com.icia.member.model;
 public class MemberDTO {
     private int id;
     private String memberEmail;
-    private String memberPass;
+    private String memberPassword;
     private String memberName;
     private String memberBirth;
     private String memberMobile;
@@ -24,12 +24,12 @@ public class MemberDTO {
         this.memberEmail = memberEmail;
     }
 
-    public String getMemberPass() {
-        return memberPass;
+    public String getMemberPassword() {
+        return memberPassword;
     }
 
-    public void setMemberPass(String memberPass) {
-        this.memberPass = memberPass;
+    public void setMemberPassword(String memberPassword) {
+        this.memberPassword = memberPassword;
     }
 
     public String getMemberName() {
@@ -61,7 +61,7 @@ public class MemberDTO {
         return "MemberDTO{" +
                 "id=" + id +
                 ", memberEmail='" + memberEmail + '\'' +
-                ", memberPass='" + memberPass + '\'' +
+                ", memberPass='" + memberPassword + '\'' +
                 ", memberName='" + memberName + '\'' +
                 ", memberBirth='" + memberBirth + '\'' +
                 ", memberMobile='" + memberMobile + '\'' +

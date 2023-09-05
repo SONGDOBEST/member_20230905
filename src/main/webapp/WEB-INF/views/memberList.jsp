@@ -24,7 +24,7 @@
                 <a href="/memberDetail?id=${member.id}">${member.id}</a>
             </td>
             <td>${member.memberEmail}</td>
-            <td>${member.memberPass}</td>
+            <td>${member.memberPassword}</td>
             <td>${member.memberName}</td>
             <td>${member.memberBirth}</td>
             <td>${member.memberMobile}</td>
@@ -37,23 +37,9 @@
                 삭제버튼을 클릭하면 DB에서 해당 학생에 대한 삭제 처리를 진행하고 삭제처리가 끝나면
                 index.jsp를 출력함.
             -->
-            <td>
-                <button onclick="update_fn('${member.id}')">수정</button>
-            </td>
-            <td>
-                <button onclick="delete_fn('${member.id}')">삭제</button>
-            </td>
         </tr>
     </c:forEach>
 </table>
 </body>
-<script>
-    const update_fn = (id) => {
-        location.href="/memberUpdate?id="+id;
-    }
 
-    const delete_fn = (id) => {
-        location.href="/delete?id="+id;
-    }
-</script>
 </html>
