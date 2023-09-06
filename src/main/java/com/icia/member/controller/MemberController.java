@@ -95,6 +95,6 @@ public class MemberController {
         session.removeAttribute("loginEmail");
         //세션을 없앨경우
         //session.invalidate();
-        return "index";
+        return "redirect:/";
     }
 }
