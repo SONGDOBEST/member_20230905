@@ -11,6 +11,10 @@
     <title>Title</title>
 </head>
 <body>
-
+    <h2>memberMain.jsp</h2>
+    로그인 이메일 : ${sessionScope.loginEmail} <br>
+    model에 담은 이메일 : ${email} <br>
+    <a href="/logout">로그아웃</a>
+    <a href="/">홈으로</a>
 </body>
 </html>

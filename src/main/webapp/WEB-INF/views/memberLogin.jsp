@@ -12,9 +12,10 @@
 </head>
 <body>
 <form action="/login" method = "post">
-    이름: <input type="text" name="loginName">
-    비밀번호: <input type="text" name="loginPass">
+    이메일: <input type="text" name="memberEmail"> <br>
+    비밀번호: <input type="text" name="memberPassword"> <br>
     <input type="submit" value="로그인">
+    <a href="/">홈으로</a>
 </form>
 </body>
 </html>

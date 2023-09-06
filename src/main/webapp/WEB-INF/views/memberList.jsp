@@ -28,15 +28,6 @@
             <td>${member.memberName}</td>
             <td>${member.memberBirth}</td>
             <td>${member.memberMobile}</td>
-            <!-- 수정, 삭제 버튼을 클릭하면 각각 /update, /delete 주소를 요청하면서 id값을
-                StudentController로 보냄(javascript 함수 정의해야 함)
-                수정버튼을 클릭하면 update.jsp화면으로 이동하며, 기존 등록한 학생의 정보가 input 태그에
-                작성되어 있으며, 학번, 이름은 수정이 불가능하고, 학과, 전화번호만 수정할 수 있음.
-                학과, 전화번호를 수정할 값으로 입력 후 버튼을 클릭하면 수정처리를 진행함.
-
-                삭제버튼을 클릭하면 DB에서 해당 학생에 대한 삭제 처리를 진행하고 삭제처리가 끝나면
-                index.jsp를 출력함.
-            -->
         </tr>
     </c:forEach>
 </table>
