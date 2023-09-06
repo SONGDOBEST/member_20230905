@@ -9,10 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b935db7-a3b2-4005-9a1f-652ff0aac201" name="Changes" comment="로그인 로그아웃 까지 완료">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/component/footer.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/component/header.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/component/test.html" afterDir="false" />
+    <list default="true" id="0b935db7-a3b2-4005-9a1f-652ff0aac201" name="Changes" comment="footer header 추가">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/component/menu.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -180,7 +178,7 @@
       <workItem from="1693881075377" duration="9092000" />
       <workItem from="1693895133457" duration="1032000" />
       <workItem from="1693896232840" duration="3609000" />
-      <workItem from="1693957560625" duration="4891000" />
+      <workItem from="1693957560625" duration="5921000" />
     </task>
     <task id="LOCAL-00001" summary="member project 로그인 제외 완료">
       <created>1693894634509</created>
@@ -210,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693961604037</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="footer header 추가">
+      <created>1693962992957</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1693962992957</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,6 +236,7 @@
     <MESSAGE value="member 페이지 틀만. 내용추가 X" />
     <MESSAGE value="member project 로그인 제외 완료" />
     <MESSAGE value="로그인 로그아웃 까지 완료" />
-    <option name="LAST_COMMIT_MESSAGE" value="로그인 로그아웃 까지 완료" />
+    <MESSAGE value="footer header 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="footer header 추가" />
   </component>
 </project>
