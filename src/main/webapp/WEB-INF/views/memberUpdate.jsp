@@ -9,6 +9,7 @@
 <html>
 <head>
     <title>회원가입</title>
+    <link rel="stylesheet" href="/resources/css/style.css">
 </head>
 <body>
 <form action="/update" method = "post">

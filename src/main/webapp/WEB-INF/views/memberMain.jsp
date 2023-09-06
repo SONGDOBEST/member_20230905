@@ -9,6 +9,7 @@
 <html>
 <head>
     <title>Title</title>
+    <link rel="stylesheet" href="/resources/css/style.css">
 </head>
 <body>
     <h2>memberMain.jsp</h2>

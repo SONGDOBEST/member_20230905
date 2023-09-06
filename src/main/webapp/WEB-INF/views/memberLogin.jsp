@@ -9,6 +9,7 @@
 <html>
 <head>
     <title>로그인</title>
+    <link rel="stylesheet" href="/resources/css/style.css">
 </head>
 <body>
 <form action="/login" method = "post">

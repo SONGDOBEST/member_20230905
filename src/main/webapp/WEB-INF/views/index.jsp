@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="/resources/css/style.css">
 </head>
 <body>
+<%@include file="component/header.jsp"%>
+<%@include file="component/nav.jsp"%>
 <h2>index.jsp</h2>
 <a href="/save">회원가입</a> <br>
 <a href="/login">로그인</a> <br>
@@ -13,5 +15,6 @@
 로그인 이메일 : ${sessionScope.loginEmail} <br>
 model에 담은 이메일 : ${email} <br>
 
+<%@include file="component/footer.jsp"%>
 </body>
 </html>
