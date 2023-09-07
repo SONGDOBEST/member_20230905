@@ -49,11 +49,11 @@ public class MemberController {
         model.addAttribute("member", memberDTO);
         return "memberDetail";
     }
-
-    @GetMapping("/delete")
-    public String delete(@RequestParam("id") Long id, Model model){
-        memberService.delete(id);
-        return "redirect:/memberList";
+    @GetMapping("/memberemail")
+    public String findById(@RequestParam("email") String email, Model model){
+        MemberDTO memberDTO = memberService.findByEmail(email);
+        model.addAttribute("member", memberDTO);
+        return "memberDetail";
     }
 
     @GetMapping("/update")
@@ -97,4 +97,10 @@ public class MemberController {
         //session.invalidate();
         return "redirect:/";
     }
+    @GetMapping("/delete")
+    public String delete(@RequestParam("id") Long id){
+        memberService.delete(id);
+        return "redirect:/members";
+    }
+
 }

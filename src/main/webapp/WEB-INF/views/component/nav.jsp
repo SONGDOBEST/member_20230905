@@ -17,9 +17,6 @@
     <li class="menu-item">
       <a href="/login">로그인</a>
     </li>
-    <li class="menu-item">
-      <a href="/members">회원목록</a>
-    </li>
     <!-- 로그인 여부에 따라 로그인했으면 oo님 환영합니다. 로그아웃 링크 보이고
          로그인 하지 않았으면 로그인이 보이도록
     -->

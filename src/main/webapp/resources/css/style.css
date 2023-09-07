@@ -1,5 +1,5 @@
 body {
-    background-color: blueviolet;
+    background-color: #75b798;
 }
 .menu{
     display: flex;
@@ -22,12 +22,9 @@ body {
     color: white;
     font-weight: bold;
 }
-.menu-item:hover{
+.menu-item a:hover{
     background-color: #20c997;
 }
 #login-area{
     display: flex;
-}
-#login-area a{
-    display: block;
 }

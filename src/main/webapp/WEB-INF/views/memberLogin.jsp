@@ -12,11 +12,14 @@
     <link rel="stylesheet" href="/resources/css/style.css">
 </head>
 <body>
+<%@include file="component/header.jsp"%>
+<%@include file="component/nav.jsp"%>
 <form action="/login" method = "post">
     이메일: <input type="text" name="memberEmail"> <br>
     비밀번호: <input type="text" name="memberPassword"> <br>
     <input type="submit" value="로그인">
     <a href="/">홈으로</a>
 </form>
+<%@include file="component/footer.jsp"%>
 </body>
 </html>

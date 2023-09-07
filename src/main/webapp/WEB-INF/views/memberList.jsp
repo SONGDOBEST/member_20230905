@@ -5,33 +5,55 @@
 <head>
     <title>회원 목록</title>
     <link rel="stylesheet" href="/resources/css/style.css">
+    <link rel="stylesheet" href="/resources/css/bootstrap.min.css">
+    <style>
+        table {
+            margin: auto;
+        }
+    </style>
 </head>
 <body>
+<%@include file="component/header.jsp"%>
+<%@include file="component/nav.jsp"%>
 <h2>list.jsp</h2>
-<table>
-    <tr>
-        <td>id</td>
-        <td>이메일</td>
-        <td>비밀번호</td>
-        <td>이름</td>
-        <td>생일</td>
-        <td>전화번호</td>
-        <td>수정</td>
-        <td>삭제</td>
-    </tr>
-    <c:forEach items="${memberList}" var="member"> //컨트롤러에서 list를 지정해줬음. 거기서 정해준 이름대로 item을 주면 됨
-        <tr>
-            <td>
-                <a href="/memberDetail?id=${member.id}">${member.id}</a>
-            </td>
-            <td>${member.memberEmail}</td>
-            <td>${member.memberPassword}</td>
-            <td>${member.memberName}</td>
-            <td>${member.memberBirth}</td>
-            <td>${member.memberMobile}</td>
-        </tr>
-    </c:forEach>
-</table>
+<div class="container">
+    <div id="member-list">
+        <table class="table table-bordered">
+            <tr>
+                <td>id</td>
+                <td>email</td>
+                <td>name</td>
+                <td>birth</td>
+                <td>mobile</td>
+                <td>조회</td>
+                <td>삭제</td>
+            </tr>
+            <c:forEach items="${memberList}" var="member">
+                <tr>
+                    <td>${member.id}</td>
+                    <td>${member.memberEmail}</td>
+                    <td>${member.memberName}</td>
+                    <td>${member.memberBirth}</td>
+                    <td>${member.memberMobile}</td>
+                    <td>
+                        <a class="btn btn-info" onclick="detail_fn('${member.id}')">조회</a>
+                    </td>
+                    <td>
+                        <a class="btn btn-danger" onclick="delete_fn('${member.id}')">삭제</a>
+                    </td>
+                </tr>
+            </c:forEach>
+        </table>
+    </div>
+</div>
+<%@include file="component/footer.jsp"%>
 </body>
-
+<script>
+    const detail_fn = (id) => {
+        location.href="/member?id="+id;
+    }
+    const delete_fn = (id) => {
+        location.href="/delete?id="+id;
+    }
+</script>
 </html>
