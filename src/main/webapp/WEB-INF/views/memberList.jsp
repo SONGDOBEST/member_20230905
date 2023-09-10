@@ -6,6 +6,7 @@
     <title>회원 목록</title>
     <link rel="stylesheet" href="/resources/css/style.css">
     <link rel="stylesheet" href="/resources/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <style>
         table {
             margin: auto;
@@ -31,7 +32,9 @@
             <c:forEach items="${memberList}" var="member">
                 <tr>
                     <td>${member.id}</td>
-                    <td>${member.memberEmail}</td>
+                    <td onclick="ajax_detail_fn('${member.id}')">
+                            ${member.memberEmail}
+                    </td>
                     <td>${member.memberName}</td>
                     <td>${member.memberBirth}</td>
                     <td>${member.memberMobile}</td>
@@ -45,6 +48,9 @@
             </c:forEach>
         </table>
     </div>
+    <div id="member-detail">
+
+    </div>
 </div>
 <%@include file="component/footer.jsp"%>
 </body>
@@ -54,6 +60,31 @@
     }
     const delete_fn = (id) => {
         location.href="/delete?id="+id;
+    }
+    const ajax_detail_fn = (id) => {
+        const memberDetail = document.getElementById("member-detail");
+        $.ajax({
+            type: "get",
+            url: "/member-ajax",
+            data: {
+                id: id
+            },
+            success: function(res){
+                let result= "<table class='table table-dark'>"; //큰 따옴표, 작은 따옴표 잘 구분해서.
+                result += "<tr>";
+                result += "<td>" + res.id + "</td>";
+                result += "<td>" + res.memberEmail + "</td>";
+                result += "<td>" + res.memberName + "</td>";
+                result += "<td>" + res.memberBirth + "</td>";
+                result += "<td>" + res.memberMobile + "</td>";
+                result += "</tr>"
+                result += "</table>"
+                memberDetail.innerHTML = result;
+            },
+            error: function(){
+                alert("회원 정보가 없습니다!")
+            }
+        })
     }
 </script>
 </html>

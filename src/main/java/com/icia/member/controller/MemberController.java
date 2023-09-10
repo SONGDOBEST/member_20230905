@@ -3,6 +3,8 @@ package com.icia.member.controller;
 import com.icia.member.model.MemberDTO;
 import com.icia.member.model.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -49,8 +51,8 @@ public class MemberController {
         model.addAttribute("member", memberDTO);
         return "memberDetail";
     }
-    @GetMapping("/memberemail")
-    public String findById(@RequestParam("email") String email, Model model){
+    @GetMapping("/memberEmail")
+    public String findByEmail(@RequestParam("email") String email, Model model){
         MemberDTO memberDTO = memberService.findByEmail(email);
         model.addAttribute("member", memberDTO);
         return "memberDetail";
@@ -101,6 +103,24 @@ public class MemberController {
     public String delete(@RequestParam("id") Long id){
         memberService.delete(id);
         return "redirect:/members";
+    }
+    @PostMapping("/duplicate-check")
+    public ResponseEntity duplicateCheck(@RequestParam("memberEmail") String memberEmail){
+        MemberDTO memberDTO = memberService.findByEmail(memberEmail);
+        if(memberDTO == null){
+            return new ResponseEntity<>(HttpStatus.OK); //http status code 200
+        }else{
+            return new ResponseEntity<>(HttpStatus.CONFLICT);
+        }
+    }
+    @GetMapping("/member-ajax")
+    public ResponseEntity ajaxDetail(@RequestParam("id") Long id){
+        MemberDTO memberDTO = memberService.findById(id);
+        if(memberDTO != null){
+            return new ResponseEntity<>(memberDTO, HttpStatus.OK);
+        }else{
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
 
 }

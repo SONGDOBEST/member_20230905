@@ -20,6 +20,6 @@
         delete from member where id=#{id}
     </delete>
     <select id="findByEmail" parameterType="String" resultType="member">
-        select * from member where memberEmail=#{email}
+        select * from member where memberEmail=#{memberEmail}
     </select>
 </mapper>
